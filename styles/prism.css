@@ -1,0 +1,134 @@
+@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/pink.css";
+@import "@radix-ui/colors/purple.css";
+@import "@radix-ui/colors/orange.css";
+@import "@radix-ui/colors/amber.css";
+@import "@radix-ui/colors/red.css";
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--slate-10);
+}
+
+.token.operator,
+.token.punctuation {
+  color: var(--slate-9);
+}
+
+.token.attr-name,
+.token.boolean,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--red-11);
+}
+
+.token.selector,
+.token.char,
+.token.builtin,
+.token.script,
+.token.inserted {
+  color: var(--green-10);
+}
+
+.token.entity,
+.token.variable {
+  color: var(--green-11);
+}
+
+.token.keyword {
+  color: var(--pink-10);
+}
+
+.token.property,
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: var(--purple-11);
+}
+
+.token.class-name,
+.token.regex,
+.token.important,
+.token.tag {
+  color: var(--orange-11);
+}
+
+.token.number,
+.token.string {
+  color: var(--amber-11);
+}
+
+.token.url,
+.token.literal-property,
+.token.property-access {
+  color: var(--blue-11);
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 767px) {
+  pre[class*='language-']:before,
+  pre[class*='language-']:after {
+    bottom: 14px;
+    box-shadow: none;
+  }
+}
+
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+  color: var(--gray-9);
+}
+
+pre[class*='language-'].line-numbers {
+  padding-left: 0;
+}
+
+pre[class*='language-'].line-numbers code {
+  padding-left: 3.8em;
+}
+
+pre[class*='language-'].line-numbers .line-numbers-rows {
+  left: 0;
+}
+
+pre[class*='language-'][data-line] {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+pre[data-line] code {
+  position: relative;
+  padding-left: 4em;
+}
+
+pre .line-highlight {
+  margin-top: 0;
+}

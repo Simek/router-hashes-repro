@@ -4,7 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import ReactPlayer from 'react-player';
+import { CodeComponent } from '@/components/Prism';
 
 export default function HomeScreen() {
   return (
@@ -21,7 +21,27 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ReactPlayer url="https://www.youtube.com/watch?v=quZv3uKSEfY" width="100%" height="100%" />
+        <CodeComponent value={{
+          fileName: 'CSS',
+          text: `@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/pink.css";
+@import "@radix-ui/colors/purple.css";
+@import "@radix-ui/colors/orange.css";
+@import "@radix-ui/colors/amber.css";
+@import "@radix-ui/colors/red.css";
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--slate-10);
+}`,
+          language: 'css'
+        }}>
+        </CodeComponent>
       </ThemedView>
     </ParallaxScrollView>
   );
